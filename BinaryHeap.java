@@ -41,8 +41,8 @@ public class BinaryHeap {
 		heap[b] = temp;
 	}
 
-	public void shiftdown(int parent){
-		int child = parent*2+1;
+	public void shiftdown(int i){
+		int child = i*2+1;
 		if (child >= size){ // last step
 			return;
 		}
@@ -50,8 +50,8 @@ public class BinaryHeap {
 		if (heap[child + 1] < heap[child]){
 			child++;
 		}
-		if (heap[parent] > heap[child]){
-			swap(child, parent);
+		if (heap[i] > heap[child]){
+			swap(child, i);
 			shiftdown(child);
 		}
 	}
